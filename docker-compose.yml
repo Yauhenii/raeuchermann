@@ -1,7 +1,5 @@
 services:
   web:
-    build: .
     ports:
       - "5001:5001"
-  redis:
-    image: "python:3.8-slim"
+    image: yauhenii/nussknacker:latest
