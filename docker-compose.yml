@@ -2,4 +2,4 @@ services:
   web:
     ports:
       - "5001:5001"
-    image: yauhenii/nussknacker:latest
+    image: yauhenii/nussknacker:0.1
