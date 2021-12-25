@@ -9,5 +9,8 @@ __pycache__/
 .env
 .secrets.toml
 
+# Workflow
+# .github/worflows
+
 # IDE
 .vscode
