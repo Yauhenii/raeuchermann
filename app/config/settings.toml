@@ -7,4 +7,7 @@
         RELOAD = true
     [default.logging]
         LOG_CONFIG_PATH = 'app/logger/log_conf.yaml'
+    [default.db]
+        POST=5432
+        HOST = '127.0.0.1'
         
