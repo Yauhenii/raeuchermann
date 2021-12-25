@@ -11,4 +11,7 @@ services:
       - db
     ports:
       - "5001:5001"
-    image: yauhenii/nussknacker:0.1
+    # image: yauhenii/nussknacker:0.1
+    build: .
+    links:
+      - "db:database"

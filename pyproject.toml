@@ -9,5 +9,6 @@
             'C0116',
             'C0413', # append sys dir above
             'no-name-in-module', # pydantic
-            'too-few-public-methods' # pydantic
+            'too-few-public-methods', # pydantic
+            'too-many-arguments',
             ]

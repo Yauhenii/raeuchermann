@@ -33,7 +33,7 @@ class BasicHandler:
                 cursor.execute(query.format(self.table_name), args)
                 try:
                     result = cursor.fetchall()
-                    connection.commit()
-                    return result
                 except ps.ProgrammingError:
-                    connection.commit()
+                    result = None
+                connection.commit()
+                return result

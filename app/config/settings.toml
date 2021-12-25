@@ -1,13 +1,14 @@
 [default]
     [default.uvicorn]
         APP = 'api:app'
-        HOST = '127.0.0.1'
+        HOST = 'localhost'
         PORT = 5001
         LOG_LEVEL = 'info'
         RELOAD = true
     [default.logging]
         LOG_CONFIG_PATH = 'app/logger/log_conf.yaml'
     [default.db]
-        POST=5432
-        HOST = '127.0.0.1'
+        PORT=5432
+        HOST='database'
+        TABLE_ENTITY_NAME='nussknacker.entity'
         

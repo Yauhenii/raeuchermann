@@ -4,7 +4,6 @@ from pydantic.main import BaseModel
 
 
 class Entity(BaseModel):
-    entity_name: str
-    entity_index: int
-    entity_number: float
-    entity_date: date
+    e_name: str
+    e_number: float
+    e_date: date
