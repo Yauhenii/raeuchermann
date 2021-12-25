@@ -10,7 +10,7 @@ __pycache__/
 .secrets.toml
 
 # Workflow
-# .github/worflows
+.github/worflows
 
 # IDE
 .vscode
