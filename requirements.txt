@@ -1,3 +1,5 @@
 beautifulsoup4
 streamlit
 watchdog
+openai
+dynaconf
