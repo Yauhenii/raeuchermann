@@ -1,17 +1,18 @@
-import os.path
-import sys
+import streamlit as st
+from app.parser import PDPParser
+from selenium.common.exceptions import InvalidArgumentException, NoSuchElementException
 
-import uvicorn
+url = st.text_input('Paste Check24 URL')
 
-sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), os.pardir))
-
-from app.config import settings
-
-if __name__ == "__main__":
-    uvicorn.run(
-        settings.uvicorn.app,
-        host=settings.uvicorn.host,
-        port=settings.uvicorn.port,
-        log_config=settings.logging.log_config_path,
-        reload=settings.uvicorn.reload,
-    )
+st.write('**URL**')
+st.write(url)
+try:
+    title_text, attribute_dict = PDPParser.get_product_info(url)
+    st.write('**Title**')
+    st.write(title_text)
+    st.write('**Attributes**')
+    st.write(attribute_dict)
+except InvalidArgumentException as e:
+    print(e)
+except NoSuchElementException as e:
+    st.write('**Wrong URL**')

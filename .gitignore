@@ -1,5 +1,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+driver
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -8,12 +9,14 @@ __pycache__/
 .venv
 .env
 .secrets.toml
+conda_env
 
 # Workflow
 .github/worflows
 
 # IDE
 .vscode
+.idea
 
 #Playground
 playground.py
